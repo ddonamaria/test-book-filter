@@ -12,6 +12,9 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
+import static com.ddu.bookfilter.config.BookConfig.DATE_FORMAT_PATTERN;
+import static com.ddu.bookfilter.config.BookConfig.WORDS_PER_PAGE;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -29,7 +32,7 @@ public class Book {
     private Integer wordCount;
 
     public void calculateWordCount() {
-        this.wordCount = this.pages * 250;
+        this.wordCount = this.pages * WORDS_PER_PAGE;
     }
 
     public String calculateFormattedDate() {
@@ -38,7 +41,7 @@ public class Book {
                 Instant.ofEpochSecond(Long.parseLong(publicationTimestamp)),
                 ZoneId.systemDefault()
             ).toLocalDate();
-            return date.format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+            return date.format(DateTimeFormatter.ofPattern(DATE_FORMAT_PATTERN));
         }
         return null;
     }
