@@ -1,7 +1,7 @@
 # 📚 Book Filter Application
 
 ## Descrición del proyecto
-Aplicación desarrollada con Java 21 que procesa y analiza datos de libros desde un archivo JSON, generando los siguientes reportes:
+Aplicación desarrollada con Java 21 que filtra y procesa datos de libros desde un archivo JSON, generando los siguientes reportes:
 
     1. Filtra los libros con más de 400 páginas y aquellos cuyo título contenga "Harry".
     
@@ -25,7 +25,7 @@ Aplicación desarrollada con Java 21 que procesa y analiza datos de libros desde
     
     8. Identifica los libros más recientes.
 
-Cada reporte se muestra en la consola con un formato claro y estructurado, facilitando la lectura y análisis de la información.
+Cada reporte se muestra en la consola con un formato estructurado, facilitando la lectura de la información.
 
 ## Tecnologías Utilizadas
 
@@ -61,26 +61,26 @@ La aplicación procesará el archivo `books.json` ubicado en `src/main/resources
 ## Estructura del Proyecto
 ```text
 test-book-filter/
-├── pom.xml                                  # Archivo de configuración de Maven
-├── README.md                                # Documentación del proyecto
-├── .gitignore                               # Archivos a ignorar por Git
+├── pom.xml          # Archivo de configuración de Maven
+├── README.md        # Documentación del proyecto
+├── .gitignore       # Archivos a ignorar por Git
 ├── src/
 │   ├── main/
 │   │   ├── java/
 │   │   │   └── com/
 │   │   │       └── ddu/
 │   │   │           └── bookfilter/
-│   │   │               ├── BookFilterApp.java       # Clase principal con método main
+│   │   │               ├── BookFilterApp.java                   # Clase principal con método main
 │   │   │               ├── config/
-│   │   │               │   └── BookConfig.java      # Configuraciones globales
+│   │   │               │   └── BookConfig.java                  # Configuraciones globales
 │   │   │               ├── model/
-│   │   │               │   ├── Author.java          # Modelo de autore
-│   │   │               │   └── Book.java            # Modelo de libro
+│   │   │               │   ├── Author.java                      # Modelo de autore
+│   │   │               │   └── Book.java                        # Modelo de libro
 │   │   │               ├── service/
-│   │   │               │   ├── BookService.java     # Lógica de filtrado y procesamiento
-│   │   │               │   └── BookReportGeneratorService.java # Generación de reportes
+│   │   │               │   ├── BookService.java                 # Lógica de filtrado y procesamiento
+│   │   │               │   └── BookReportGeneratorService.java  # Generación de reportes
 │   │   │               └── utils/
-│   │   │                   └── FileUtil.java        # Utilidades para manejo de archivos
+│   │   │                   └── FileUtil.java                    # Utilidades para manejo de archivos
 │   │   └── resources/
-│   │       └── books.json                           # Datos de entrada en formato JSON
+│   │       └── books.json                                       # Datos de entrada en formato JSON
 ```
